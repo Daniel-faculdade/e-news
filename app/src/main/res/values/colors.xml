@@ -12,4 +12,5 @@
     <color name="DarkOrange">#ff2800</color>
     <color name="lightOrange">#e34234</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="white_transparent">#99FFFFFF</color>
 </resources>
