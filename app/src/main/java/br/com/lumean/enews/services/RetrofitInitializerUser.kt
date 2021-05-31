@@ -1,4 +1,4 @@
-package br.com.stockstalk.enews.services
+package br.com.lumean.enews.services
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

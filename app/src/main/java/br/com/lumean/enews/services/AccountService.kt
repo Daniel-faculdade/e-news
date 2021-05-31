@@ -1,6 +1,6 @@
-package br.com.stockstalk.enews.services
+package br.com.lumean.enews.services
 
-import br.com.stockstalk.enews.models.Account
+import br.com.lumean.enews.models.Account
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST

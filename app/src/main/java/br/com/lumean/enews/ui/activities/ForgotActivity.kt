@@ -1,11 +1,11 @@
-package br.com.stockstalk.enews.ui.activities
+package br.com.lumean.enews.ui.activities
 
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import br.com.stockstalk.enews.R
-import br.com.stockstalk.enews.models.Account
-import br.com.stockstalk.enews.services.RetrofitInitializerUser
+import br.com.lumean.enews.models.Account
+import br.com.lumean.enews.services.RetrofitInitializerUser
+import br.com.lumean.enews.R
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.Theme
 import retrofit2.Call
