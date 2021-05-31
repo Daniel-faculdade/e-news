@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pexels_soumil_kumar_735911" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_background">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/enewsLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/playstore_icon"
+
+            />
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enewsLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/eg_news"
+            android:textColor="@color/white"
+            android:textSize="45sp" />
+
+
+        <TextView
+            android:id="@+id/homeDesc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeTitle"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center"
+            android:text="Digite o e-mail de acesso da sua conta:"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/homeDesc2"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/e_mail"
+            android:paddingLeft="24dp"
+
+            />
+
+
+        <Button
+            android:id="@+id/forgotButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/inputEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/roboto_light"
+            android:text="Enviar e-mail"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,82 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/home_background">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/homeTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/eg_news"
-        android:textColor="@color/white"
-        android:textSize="45sp"
-        android:fontFamily="@font/roboto_bold"/>
-
-    <TextView
-        android:id="@+id/homeDesc"
-        android:layout_below="@id/homeTitle"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:fontFamily="@font/roboto_light"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@string/veja_not_cias_sobre_os_principais"/>
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pexels_tima_miroshnichenko_7046717" />
 
-    <TextView
-        android:id="@+id/homeDesc2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homeDesc"
-        android:fontFamily="@font/roboto_bold"
-        android:textColor="@color/white"
-        android:text="@string/e_sports_e_pro_players"
-        android:textSize="17sp"
-        android:layout_centerHorizontal="true"
-        />
 
-    <Button
-        android:id="@+id/loginButton"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="42dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/homeDesc2"
-        android:background="@drawable/button_background"
-        android:layout_centerHorizontal="true"
-        android:text="@string/log_in"
-        android:fontFamily="@font/roboto_light"
-        android:textColor="@color/white"
-        />
-
-    <TextView
-        android:id="@+id/ou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginButton"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/roboto_bold"
-        android:textSize="15sp"
-        android:textColor="@color/white"
-        android:text="ou"/>
-
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="6dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/ou"
-        android:background="@drawable/buttonborder_background"
-        android:layout_centerHorizontal="true"
-        android:text="QUERO ME REGISTRAR"
-        android:fontFamily="@font/roboto_light"
-        android:textColor="@color/white"
-        />
+        android:layout_height="match_parent"
+        android:background="@drawable/home_background">
 
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/enewsLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/playstore_icon"
 
-</RelativeLayout>
+            />
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enewsLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/eg_news"
+            android:textColor="@color/white"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/homeDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeTitle"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center"
+            android:text="@string/veja_not_cias_sobre_os_principais"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/homeDesc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeDesc"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/e_sports_e_pro_players"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/homeDesc2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/log_in"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/ou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="ou"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/ou"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/buttonborder_background"
+            android:fontFamily="@font/roboto_light"
+            android:text="QUERO ME REGISTRAR"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

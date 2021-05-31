@@ -13,4 +13,6 @@
     <color name="lightOrange">#e34234</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="white_transparent">#99FFFFFF</color>
+    <color name="home_orange">#54E34234</color>
+    <color name="home_black">#54282120</color>
 </resources>

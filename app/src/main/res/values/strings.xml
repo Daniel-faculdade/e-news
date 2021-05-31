@@ -7,4 +7,8 @@
     <string name="e_mail">E-mail</string>
     <string name="senha">Senha</string>
     <string name="log_in">Log in</string>
+
+    <string name="success">Sucesso</string>
+    <string name="success_message">Usuário criado com sucesso!</string>
+    <string name="button_ok">Ok</string>
 </resources>

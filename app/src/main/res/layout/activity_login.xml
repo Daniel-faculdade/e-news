@@ -1,111 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_background">
-
-    <TextView
-        android:id="@+id/homeTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/eg_news"
-        android:textColor="@color/white"
-        android:textSize="45sp"
-        android:fontFamily="@font/roboto_bold"/>
-
-
-
-    <TextView
-        android:id="@+id/homeDesc2"
-        android:layout_below="@id/homeTitle"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:fontFamily="@font/roboto_light"
+    >
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:text="Acesse sua conta e fique conectado"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/pexels_lucie_liz_3165335"
+        android:scaleType="centerCrop"/>
 
-    <TextView
-        android:id="@+id/homeDesc3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homeDesc2"
-        android:fontFamily="@font/roboto_light"
-        android:textColor="@color/white"
-        android:text="com o universo do e-games e"
-        android:textSize="17sp"
-        android:layout_centerHorizontal="true"
-        />
-
-    <TextView
-        android:id="@+id/homeDesc4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homeDesc3"
-        android:fontFamily="@font/roboto_bold"
-        android:textColor="@color/white"
-        android:text="streaming"
-        android:textSize="17sp"
-        android:layout_centerHorizontal="true"
-        />
-
-
-
-    <EditText
-        android:id="@+id/inputEmail"
-        android:layout_below="@id/homeDesc4"
-        android:background="@drawable/edittext_background"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="35dp"
-        android:paddingLeft="24dp"
-        android:text="Login ou e-mal"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_background">
 
-        />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/enewsLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/playstore_icon"
+            android:layout_centerHorizontal="true"
 
-    <EditText
-        android:id="@+id/inputSenha"
-        android:layout_below="@id/inputEmail"
-        android:background="@drawable/edittext_background"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="35dp"
-        android:paddingLeft="24dp"
-        android:text="@string/senha"
+            />
 
-        />
-    <Button
-        android:id="@+id/buttonEsqueceu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Esqueceu sua senha ?"
-        android:layout_below="@id/inputSenha"
-        android:textColor="@color/white"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="37dp"
-
-        android:background="@color/transparent"/>
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/enewsLogo"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/eg_news"
+            android:textColor="@color/white"
+            android:textSize="45sp" />
 
 
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="55dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/buttonEsqueceu"
-        android:background="@drawable/button_background"
-        android:layout_centerHorizontal="true"
-        android:text="@string/log_in"
-        android:fontFamily="@font/roboto_light"
-        android:textColor="@color/white"
-        />
+        <TextView
+            android:id="@+id/homeDesc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeTitle"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center"
+            android:text="Acesse sua conta e fique conectado"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/homeDesc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeDesc2"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_light"
+            android:text="com o universo do e-games e"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/homeDesc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeDesc3"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="streaming"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
 
 
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/homeDesc4"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/e_mail"
+            android:paddingLeft="24dp"
 
-</RelativeLayout>
+            />
+
+        <EditText
+            android:id="@+id/inputSenha"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/inputEmail"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            android:paddingLeft="24dp"
+
+            />
+
+        <Button
+            android:id="@+id/buttonEsqueceu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputSenha"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="37dp"
+            android:background="@color/transparent"
+            android:text="Esqueceu sua senha ?"
+
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/buttonEsqueceu"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="55dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/log_in"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>
