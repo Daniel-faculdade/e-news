@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">E-news</string>
+    <string name="eg_news">EG NEWS</string>
+    <string name="e_sports_e_pro_players">e-sports e pro-players</string>
+    <string name="veja_not_cias_sobre_os_principais">Veja notícias sobre os principais</string>
+    <string name="nome_de_usu_rio">Nome de usuário</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="log_in">Log in</string>
+
+    <string name="success">Sucesso</string>
+    <string name="success_message">Usuário criado com sucesso!</string>
+    <string name="button_ok">Ok</string>
 </resources>
