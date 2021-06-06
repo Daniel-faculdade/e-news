@@ -1,0 +1,22 @@
+[debug] [2021-06-02T14:19:20.340Z] ----------------------------------------------------------------------
+[debug] [2021-06-02T14:19:20.342Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only database
+[debug] [2021-06-02T14:19:20.342Z] CLI Version:   7.14.0
+[debug] [2021-06-02T14:19:20.343Z] Platform:      darwin
+[debug] [2021-06-02T14:19:20.343Z] Node Version:  v15.0.1
+[debug] [2021-06-02T14:19:20.344Z] Time:          Wed Jun 02 2021 11:19:20 GMT-0300 (Brasilia Standard Time)
+[debug] [2021-06-02T14:19:20.344Z] ----------------------------------------------------------------------
+[debug] [2021-06-02T14:19:20.344Z] 
+[warn] ⚠  Please use firebase emulators:start to start the Realtime Database or Cloud Firestore emulators.
+[debug] [2021-06-02T14:19:20.380Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/danielbatista/.cache/firebase/emulators/firebase-database-emulator-v4.4.0.jar","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2021-06-02T14:19:21.433Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/danielbatista/.cache/firebase/emulators/firebase-database-emulator-v4.4.0.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2021-06-02T14:19:22.709Z] 11:19:22.707 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2021-06-02T14:19:23.009Z] 11:19:23.007 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000

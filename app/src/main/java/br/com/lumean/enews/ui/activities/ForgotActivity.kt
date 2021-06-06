@@ -37,7 +37,7 @@ class ForgotActivity: AppCompatActivity() {
                     MaterialDialog.Builder(this@ForgotActivity)
                         .theme(Theme.LIGHT)
                         .title(R.string.success)
-                        .content(R.string.success_message)
+                        .content(R.string.success_forgotten_message)
                         .positiveText(R.string.button_ok)
                         .show()
 

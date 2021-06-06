@@ -47,7 +47,7 @@ class RegisterActivity : AppCompatActivity() {
                     MaterialDialog.Builder(this@RegisterActivity)
                         .theme(Theme.LIGHT)
                         .title(R.string.success)
-                        .content(R.string.success_message)
+                        .content(R.string.success_register_message)
                         .positiveText(R.string.button_ok)
                         .onPositive { dialog, which ->
                             showHome()

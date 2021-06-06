@@ -3,11 +3,12 @@ package br.com.lumean.enews.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.util.Log.DEBUG
 import android.widget.Button
 import android.widget.EditText
 import br.com.lumean.enews.models.Account
 import br.com.lumean.enews.services.RetrofitInitializerUser
-import br.com.lumean.enews.ui.activities.ForgotActivity
 import br.com.lumean.enews.R
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.Theme
@@ -24,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         var loginButton = findViewById<Button>(R.id.loginButton)
         loginButton.setOnClickListener {
-            handdleLogin()
+            handleLogin()
         }
 
         var forgotButton = findViewById<Button>(R.id.buttonEsqueceu)
@@ -35,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun handdleLogin(){
+    fun handleLogin() : Boolean {
         var email = findViewById<EditText>(R.id.inputEmail)
         var senha = findViewById<EditText>(R.id.inputSenha)
 
@@ -46,23 +47,22 @@ class LoginActivity : AppCompatActivity() {
         var service = RetrofitInitializerUser().AccountService()
         var call = service.auth(account)
 
-        call.enqueue(object: Callback<Account>{
+        call.enqueue(object: Callback<Account> {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
                 if(response.code() == 200){
                     MaterialDialog.Builder(this@LoginActivity)
                         .theme(Theme.LIGHT)
                         .title(R.string.success)
-                        .content(R.string.success_message)
+                        .content(R.string.success_login_message)
                         .positiveText(R.string.button_ok)
                         .show()
                 }
             }
 
-            override fun onFailure(call: Call<Account>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
+            override fun onFailure(call: Call<Account>, t: Throwable) { }
         })
 
+        return true
     }
 
 }
