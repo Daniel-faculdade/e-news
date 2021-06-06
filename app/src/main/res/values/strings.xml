@@ -9,6 +9,17 @@
     <string name="log_in">Log in</string>
 
     <string name="success">Sucesso</string>
-    <string name="success_message">Usuário criado com sucesso!</string>
+    <string name="success_register_message">Usuário criado com sucesso!</string>
+    <string name="success_login_message">Bem vindo ao E-news!</string>
+    <string name="success_forgotten_message">Senha !</string>
     <string name="button_ok">Ok</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Main Article -->
+    <string name="main_title_topArticles">TOP 7 - ASSUNTOS DO MOMENTO</string>
+    <string name="main_title_teams">TEAMS</string>
+    <string name="main_caption_teams">VEJA NOTÍCIAS SOBRE OS PRINCIPAIS TIMES</string>
+
+    <string name="description_logo">EG-news - Nóticias sobre E-sports</string>
 </resources>

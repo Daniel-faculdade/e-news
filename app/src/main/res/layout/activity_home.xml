@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:contentDescription=""
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -22,9 +23,7 @@
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:src="@drawable/playstore_icon"
-
-            />
+            android:src="@drawable/playstore_icon"/>
 
         <TextView
             android:id="@+id/homeTitle"
@@ -74,10 +73,21 @@
             android:textColor="@color/white" />
 
         <TextView
+            android:id="@+id/loginVisitor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginButton"
+            android:layout_marginTop="10dp"
+            android:text="Fazer login como visitante"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <TextView
             android:id="@+id/ou"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/loginButton"
+            android:layout_below="@id/loginVisitor"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/roboto_bold"
             android:text="ou"
