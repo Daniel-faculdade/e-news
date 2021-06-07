@@ -82,9 +82,9 @@ class LoginActivity : AppCompatActivity() {
 
         return true
     }
-    
+
     fun handleLoginSuccess() {
-        var intent = Intent(this, MainActivity::class.java)
+        var intent = Intent(this, HomeActivity::class.java)
 
         startActivity(intent)
         finish()

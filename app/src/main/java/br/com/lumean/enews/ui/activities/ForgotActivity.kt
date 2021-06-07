@@ -51,7 +51,7 @@ class ForgotActivity: AppCompatActivity() {
                         .setOnClickListener(object : OnDialogClickListener {
                             override fun onClick(dialog: AestheticDialog.Builder) {
                                 dialog.dismiss()
-                                var intent = Intent(this@ForgotActivity, )
+                                var intent = Intent(this@ForgotActivity,LoginActivity::class.java )
                                 startActivity(intent)
                                 finish()
                             }
