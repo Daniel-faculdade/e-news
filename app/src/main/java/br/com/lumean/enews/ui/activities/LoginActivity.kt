@@ -56,6 +56,8 @@ class LoginActivity : AppCompatActivity() {
                         .content(R.string.success_login_message)
                         .positiveText(R.string.button_ok)
                         .show()
+
+                    handleLoginSuccess()
                 }
             }
 
@@ -63,6 +65,13 @@ class LoginActivity : AppCompatActivity() {
         })
 
         return true
+    }
+
+    fun handleLoginSuccess() {
+        var intent = Intent(this, MainActivity::class.java)
+
+        startActivity(intent)
+        finish()
     }
 
 }

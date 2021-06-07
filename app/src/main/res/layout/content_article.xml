@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/divisor1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/gradient_divisor" />
+
+    <ImageView
+        android:id="@+id/imageArticle"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/divisor1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/article_example"
+        />
+
+    <ImageView
+        android:id="@+id/divisor2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/imageArticle"
+        android:src="@drawable/gradient_divisor"
+        />
+
+    <TextView
+        android:id="@+id/titleArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="12dp"
+        android:layout_below="@+id/imageArticle"
+        android:text="WINNERS OF SOUTH"
+        android:textSize="24sp"
+        android:textColor="@color/lightOrange"
+        android:fontFamily="@font/roboto_bold"/>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:context=".ui.fragments.ArticleDetailFragment"
+        android:layout_below="@+id/titleArticle">
+
+        <TextView
+            android:id="@+id/articleContent"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/large_text"
+            android:fontFamily="@font/roboto_regular"/>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/publishedDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/publishDate"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_below="@+id/scrollView"
+        android:paddingHorizontal="12dp"/>
+
+    <TextView
+        android:id="@+id/publishedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="22/22/2222"
+        android:fontFamily="@font/roboto_light"
+        android:layout_below="@+id/scrollView"
+        android:layout_toRightOf="@+id/publishedDateLabel"
+        android:layout_marginRight="5dp"/>
+
+</RelativeLayout>

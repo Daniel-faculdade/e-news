@@ -32,7 +32,6 @@ class TeamsAdapter(var context: Context, var teams : List<Team>) : RecyclerView.
             var teamName = itemView.findViewById<TextView>(R.id.teamName)
             var teamImage = itemView.findViewById<ImageView>(R.id.teamImage)
 
-
             teamName.text = team.name
             teamImage.load(team.imageUrl)
         }

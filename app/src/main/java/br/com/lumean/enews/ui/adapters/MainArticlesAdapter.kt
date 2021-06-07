@@ -1,6 +1,7 @@
 package br.com.lumean.enews.ui.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.lumean.enews.R
 import br.com.lumean.enews.models.Article
+import br.com.lumean.enews.ui.activities.ArticleActivity
 
 class MainArticlesAdapter(var context: Context, var articles : List<Article>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -18,6 +20,13 @@ class MainArticlesAdapter(var context: Context, var articles : List<Article>) : 
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as ArticleHolder).bind(context, articles[position])
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, ArticleActivity::class.java)
+            val article = articles[position]
+            intent.putExtra("article",  article)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
