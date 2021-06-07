@@ -1,4 +1,4 @@
-package br.com.stockstalk.enews.models
+package br.com.lumean.enews.models
 
 class Account {
     var name: String? = ""
