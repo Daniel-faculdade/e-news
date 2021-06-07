@@ -105,6 +105,4 @@
             android:textColor="@color/white" />
 
     </RelativeLayout>
-
-
 </FrameLayout>
