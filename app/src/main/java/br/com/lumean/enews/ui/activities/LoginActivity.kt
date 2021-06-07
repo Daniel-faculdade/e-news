@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Log.DEBUG
+import android.view.Gravity
 import android.widget.Button
 import android.widget.EditText
 import br.com.lumean.enews.models.Account
@@ -12,6 +13,7 @@ import br.com.lumean.enews.services.RetrofitInitializerUser
 import br.com.lumean.enews.R
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.Theme
+import com.thecode.aestheticdialogs.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -50,18 +52,32 @@ class LoginActivity : AppCompatActivity() {
         call.enqueue(object: Callback<Account> {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
                 if(response.code() == 200){
-                    MaterialDialog.Builder(this@LoginActivity)
-                        .theme(Theme.LIGHT)
-                        .title(R.string.success)
-                        .content(R.string.success_login_message)
-                        .positiveText(R.string.button_ok)
+
+                }else{
+                    AestheticDialog.Builder(this@LoginActivity, DialogStyle.EMOTION, DialogType.ERROR)
+                        .setTitle("Erro ao tentar efetuar login !")
+                        .setCancelable(true)
                         .show()
 
                     handleLoginSuccess()
                 }
             }
 
-            override fun onFailure(call: Call<Account>, t: Throwable) { }
+            override fun onFailure(call: Call<Account>, t: Throwable) {
+                AestheticDialog.Builder(this@LoginActivity, DialogStyle.FLAT, DialogType.ERROR)
+                    .setTitle("Ops, ocorreu um erro")
+                    .setMessage("Ocorreu um erro ao tentar realizar essa tarefa, tente novamente mais tarde.")
+                    .setCancelable(false)
+                    .setDarkMode(true)
+                    .setGravity(Gravity.CENTER)
+                    .setAnimation(DialogAnimation.SHRINK)
+                    .setOnClickListener(object : OnDialogClickListener {
+                        override fun onClick(dialog: AestheticDialog.Builder) {
+                            dialog.dismiss()
+                        }
+                    })
+                    .show()
+            }
         })
 
         return true

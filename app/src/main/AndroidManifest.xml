@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Enews">
+<<<<<<< HEAD
 
         <activity
             android:name=".ui.activities.ArticleActivity"
@@ -19,6 +20,8 @@
             android:theme="@style/Theme.Enews.NoActionBar"></activity>
         <activity android:name=".ui.activities.MainActivity" />
 
+=======
+>>>>>>> feature/auth
         <activity android:name=".ui.activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

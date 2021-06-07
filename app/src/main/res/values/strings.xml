@@ -11,6 +11,7 @@
     <string name="log_in">Log in</string>
 
     <string name="success">Sucesso</string>
+    <string name="error_default">Ops, Ocorreu um erro ao tentar realizar está tarefa, tente novamente mais tarde.</string>
     <string name="success_register_message">Usuário criado com sucesso!</string>
     <string name="success_login_message">Bem vindo ao E-news!</string>
     <string name="success_forgotten_message">Senha !</string>
