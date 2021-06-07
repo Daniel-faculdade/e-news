@@ -3,11 +3,12 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_marginRight="10dp">
+    android:layout_marginStart="15dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <com.google.android.material.imageview.ShapeableImageView
         <ImageView
             android:id="@+id/teamImage"
             android:layout_width="90dp"
@@ -20,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/teamImage"
-            android:layout_marginLeft="15dp"
+            android:layout_marginStart="5dp"
             android:text="Team Test"
             android:textSize="16sp"
             android:fontFamily="@font/roboto_medium"

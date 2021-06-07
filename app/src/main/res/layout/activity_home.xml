@@ -10,13 +10,10 @@
         android:scaleType="centerCrop"
         android:src="@drawable/pexels_tima_miroshnichenko_7046717" />
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/home_background">
-
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/enewsLogo"
             android:layout_width="100dp"
@@ -78,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/loginButton"
             android:layout_marginTop="10dp"
-            android:text="Fazer login como visitante"
+            android:text="@string/link_login_visitor"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textAlignment="center"/>
@@ -90,7 +87,7 @@
             android:layout_below="@id/loginVisitor"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/roboto_bold"
-            android:text="ou"
+            android:text="@string/or"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -104,10 +101,8 @@
             android:layout_marginTop="6dp"
             android:background="@drawable/buttonborder_background"
             android:fontFamily="@font/roboto_light"
-            android:text="QUERO ME REGISTRAR"
+            android:text="@string/btn_registrar"
             android:textColor="@color/white" />
 
     </RelativeLayout>
-
-
 </FrameLayout>
