@@ -23,7 +23,7 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">55dp</item>
     </style>
-
+  
     <style name="Theme.Enews.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Enews.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

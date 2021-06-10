@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Enews">
+      
         <activity android:name=".ui.activities.TeamActivity"></activity>
         <activity
             android:name=".ui.activities.ArticleActivity"
