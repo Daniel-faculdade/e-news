@@ -1,6 +1,7 @@
 package br.com.lumean.enews.ui.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.lumean.enews.R
 import br.com.lumean.enews.models.Team
+import br.com.lumean.enews.ui.activities.ArticleActivity
+import br.com.lumean.enews.ui.activities.TeamActivity
 
 class TeamsAdapter(var context: Context, var teams : List<Team>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -19,6 +22,13 @@ class TeamsAdapter(var context: Context, var teams : List<Team>) : RecyclerView.
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as ArticleHolder).bind(context, teams[position])
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, TeamActivity::class.java)
+            val team = teams[position]
+            intent.putExtra("team", team)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
