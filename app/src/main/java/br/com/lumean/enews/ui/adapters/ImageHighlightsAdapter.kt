@@ -1,8 +1,10 @@
 package br.com.lumean.enews.ui.adapters
 
+
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+
 import android.graphics.PorterDuff
 import android.util.Log
 import android.view.LayoutInflater
@@ -32,6 +34,7 @@ class ImageHighlightsAdapter(var context: Context, var articles : List<Article>)
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as ArticleHolder).bind(context, articles[position])
 
+
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ArticleActivity::class.java)
             val article = articles[position]
@@ -39,7 +42,6 @@ class ImageHighlightsAdapter(var context: Context, var articles : List<Article>)
             context.startActivity(intent)
         }
     }
-
     override fun getItemCount(): Int {
         return articles.size
     }
