@@ -18,4 +18,5 @@
     <color name="home_orange">#54E34234</color>
     <color name="home_black">#54282120</color>
     <color name="orangeLight">#ff6600</color>
+    <color name="orange_titles">#e34234</color>
 </resources>
