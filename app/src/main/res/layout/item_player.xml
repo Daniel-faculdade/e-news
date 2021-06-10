@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/playerAvatar"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/playstore_icon"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Player name"
+            android:textSize="24dp"
+            android:textColor="@color/orangeLight"
+            android:fontFamily="@font/roboto_bold"
+            />
+
+        <TextView
+            android:id="@+id/playerTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Player Tag"
+            android:textSize="14dp"
+            android:textColor="@color/lightGrey"
+            android:fontFamily="@font/roboto_light"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
