@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycViewHighlights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:id="@+id/fragmentDivisor2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/recycViewHighlights"
+        android:src="@drawable/gradient_divisor" />
+
+    <LinearLayout
+        android:id="@+id/sectionTopArticles"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentDivisor2"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewMainThemes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:textColor="@color/DarkOrange"
+            android:text="@string/main_title_topArticles"  />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycViewListArtcles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="true"
+            android:divider="@null"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:itemCount="7" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/setionTeams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sectionTopArticles"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTeams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:textColor="#e34234"
+            android:text="@string/main_title_teams"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTeams"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#656565"
+            android:text="@string/main_caption_teams"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycViewListTeams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+</RelativeLayout>
