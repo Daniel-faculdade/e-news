@@ -52,14 +52,14 @@ class LoginActivity : AppCompatActivity() {
         call.enqueue(object: Callback<Account> {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
                 if(response.code() == 200){
-
+                    handleLoginSuccess()
                 }else{
                     AestheticDialog.Builder(this@LoginActivity, DialogStyle.EMOTION, DialogType.ERROR)
                         .setTitle("Erro ao tentar efetuar login !")
                         .setCancelable(true)
                         .show()
 
-                    handleLoginSuccess()
+
                 }
             }
 
@@ -84,7 +84,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun handleLoginSuccess() {
-        var intent = Intent(this, HomeActivity::class.java)
+        var intent = Intent(this, MainActivity::class.java)
 
         startActivity(intent)
         finish()

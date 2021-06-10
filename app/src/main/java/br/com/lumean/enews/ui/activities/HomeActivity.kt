@@ -27,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
 
         var loginVisitor = findViewById<TextView>(R.id.loginVisitor)
         loginVisitor.setOnClickListener {
-            var intent = Intent(this, HomeActivity::class.java)
+            var intent = Intent(this, MainActivity::class.java)
 
             startActivity(intent)
             finish()
